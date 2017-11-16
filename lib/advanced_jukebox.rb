@@ -9,8 +9,8 @@
 
   
   def list(my_songs)
-    my_songs.each do |song, location|
-      puts "song"
+    my_songs.keys.each_with_index do |song, i|
+      puts "#{i+1}. #{song}"
     end
     #this method is different! Collect the keys of the my_songs hash and 
     #list the songs by name
@@ -20,7 +20,7 @@
   def play(my_songs)
     puts "Please enter a song name"
     song_to_play = gets.chomp
-    if !my_songs.keys.include?(song_to_play)
+    if !my_songs.include?(song_to_play)
       puts "Invalid input, please try again"
     else
       puts "Now playing #{song_to_play}"
