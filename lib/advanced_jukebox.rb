@@ -7,16 +7,16 @@
   - exit : exits this program"
   end
 
-  
+
   def list(my_songs)
     my_songs.keys.each_with_index do |song, i|
       puts "#{i+1}. #{song}"
     end
-    #this method is different! Collect the keys of the my_songs hash and 
+    #this method is different! Collect the keys of the my_songs hash and
     #list the songs by name
   end
-  
-  
+
+
   def play(my_songs)
     puts "Please enter a song name"
     song_to_play = gets.chomp
@@ -33,14 +33,14 @@
     #if it isn't, tell them their choice is invalid
     #if it is, play the song using the system 'open <file path>' syntax
     #get the file path of the song by looking it up in the my_songs hash
-    
+
   end
-  
+
   def exit_jukebox
     puts "Goodbye"
     #this method is the same as in jukebox.rb
   end
-  
+
   def run(my_songs)
     help
  -
